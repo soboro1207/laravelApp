@@ -26,11 +26,17 @@ Route::get('/', function () {
 //   return '<html><body><h1>Hello</h1><p> This is sample page.</p></body></html>';
 // });
 
+//Route::get('action', 'HelloController@index');
+
+Route::get('hello/', 'HelloController@index');
+Route::get('hello/other', 'HelloController@other');
+
+/*
 Route::get('hello/{msg?}',function ($msg='no message') {
   $html = <<<EOF
   <html>
   <head>
-  <title>HELLO</title>
+  <title>HELLO/index</title>
   <style>
   body {font-size:11pt; color:#999;}
   h1 { font-size:55pt; text-align:left; color: #eee;
@@ -38,9 +44,8 @@ Route::get('hello/{msg?}',function ($msg='no message') {
   </style>
   </head>
   <body>
-    <h1>すまない</h1>
-    <p>{$msg}</p>
-    <p>↑は任意パラメータ。渡されていたらその値になるし、渡されていなかったら no message と出るだけ</p>
+    <h1>index</h1>
+    <p>コントローラのテスト</p>
     <a href="/">back</a>
   </body>
   </html>
@@ -48,3 +53,4 @@ Route::get('hello/{msg?}',function ($msg='no message') {
 
   return $html;
 });
+*/
